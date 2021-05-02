@@ -13,6 +13,7 @@ exports.up = function(knex) {
       .notNullable()
       .references('id')
       .inTable('recipes')
+      .onUpdate('CASCADE')
   })
   .createTable('instructions', (table) => {
       table.increments()
